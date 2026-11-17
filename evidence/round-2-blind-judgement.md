@@ -1,6 +1,6 @@
 # Round 2: blind judgement
 
-A separate Opus 5.5 (low effort) judge scored each pair under random A/B labels without knowing which version used `/twotwo`. It saw the same desktop and phone screenshots and the HTML source.
+A separate judge agent scored each pair under random A/B labels without knowing which version used `/twotwo`. It saw the same desktop and phone screenshots and the HTML source.
 
 **Answer key:**
 - event-poster: A = twotwo, B = baseline

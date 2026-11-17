@@ -2,7 +2,7 @@
 
 **Two reviews. Two execution passes.**
 
-Twotwo is an agent skill for Claude Code and other `SKILL.md`-compatible coding agents. It turns a rough request into a clear objective, does the work, and then improves the result in a deliberate second pass that checks the output as delivered.
+Twotwo is a model- and agent-agnostic skill for any AI agent that supports `SKILL.md` skills or custom instructions. It turns a rough request into a clear objective, does the work, and then improves the result in a deliberate second pass that checks the output as delivered.
 
 > Understand twice, execute once, improve once.
 
@@ -17,7 +17,7 @@ Twotwo reviews the request twice before starting, then critiques the result agai
 
 ## Evidence
 
-Each prompt was run twice in fresh Claude Opus 5.5 subagents (low effort): once as written, once prefixed with `/twotwo`. Both runs got identical instructions apart from the skill. Every result was screenshotted the same way, at desktop width and at phone width. A separate judge then scored each pair **blind**, under random A/B labels, on missing requirements, readability, alignment, visual hierarchy and usefulness, and recalculated every number in the dashboards.
+Each prompt was run twice in fresh agent sessions on the same model and settings: once as written, once prefixed with `/twotwo`. Both runs got identical instructions apart from the skill. Every result was screenshotted the same way, at desktop width and at phone width. A separate judge then scored each pair **blind**, under random A/B labels, on missing requirements, readability, alignment, visual hierarchy and usefulness, and recalculated every number in the dashboards.
 
 **Blind result: `/twotwo` won 3 of 4.** The pairs below are the ones where the improvement is clear and both versions are worth looking at. The full record, including the loss and the pairs left out, is under [Full evidence](#full-evidence).
 
@@ -95,25 +95,13 @@ The reviews stay internal. You see the task, the result, and assumptions or unve
 
 ## Install
 
-### Claude Code
-
-Personal (all projects):
+Clone the repository into your agent's skills directory:
 
 ```bash
-git clone https://github.com/esafwan/twotwo.git ~/.claude/skills/twotwo
+git clone https://github.com/esafwan/twotwo.git <your-agent-skills-dir>/twotwo
 ```
 
-Single project:
-
-```bash
-git clone https://github.com/esafwan/twotwo.git .claude/skills/twotwo
-```
-
-Start a new session and the skill will be available.
-
-### Other agents
-
-Any agent that loads `SKILL.md` skills can use Twotwo. Clone it, or symlink it, into that agent's skills directory.
+Start a new session and the skill will be available. If your agent doesn't load skills, paste the contents of [`SKILL.md`](SKILL.md) into its instructions or system prompt; the workflow is plain text and works the same way.
 
 ## Usage
 
