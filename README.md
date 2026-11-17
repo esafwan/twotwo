@@ -90,3 +90,8 @@ You can also say "twotwo this" or "think it through, do it, then improve it".
 | --- | --- |
 | [`SKILL.md`](SKILL.md) | The skill definition that the agent loads. |
 | `README.md` | This document. |
+| [`LICENSE`](LICENSE) | MIT License. |
+
+## License
+
+[MIT](LICENSE) © 2026 Safwan Erooth
