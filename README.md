@@ -2,7 +2,7 @@
 
 **Two reviews. Two execution passes.**
 
-Twotwo is a model- and agent-agnostic skill for any AI agent that supports `SKILL.md` skills or custom instructions. It turns a rough request into a clear objective, does the work, and then improves the result in a deliberate second pass that checks the output as delivered.
+Twotwo is a skill for any AI agent. It turns a rough request into a clear objective, does the work, and then improves the result in a deliberate second pass that checks the output as delivered.
 
 > Understand twice, execute once, improve once.
 
