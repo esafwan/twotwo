@@ -22,19 +22,21 @@ Twotwo fixes both. It reviews the request twice before starting and critiques th
 | 1 | **First review**: clarify | Identify the intended outcome and scope, resolve ambiguity, and surface implicit requirements without changing your intent. |
 | 2 | **Second review**: refine | Look for remaining gaps, conflicts, unclear boundaries, and scope creep. Produce a precise task statement. Ask only if missing information would materially change the outcome. |
 | 3 | **First pass**: execute | State the task briefly, then produce a complete first result. |
-| 4 | **Second pass**: improve | Compare the result with **both** your original request and the refined task statement, then fix the weaknesses. It must be a real improvement, not rewording. |
+| 4 | **Second pass**: improve | Compare the result with **both** your original request and the refined task statement. Inspect the output as delivered: render visuals, recompute figures, run code. Then fix the weaknesses. It must be a real improvement, not rewording. |
 
 The reviews stay internal. You see:
 
 1. **Task:** the final task statement.
 2. **Result:** the finished, improved result.
 3. **Assumptions:** only when they matter.
+4. **Unverified:** anything it couldn't render, run or check.
 
 ## Principles
 
 - **Preserve intent.** Clarifying never widens the scope.
 - **Assume for minor gaps, ask for material ones.**
 - **Make the second pass count.** Fix errors and gaps; don't just reword.
+- **Check what the user will see.** Overlaps, cropped elements, captions that contradict the chart, and mismatched numbers only show up in the rendered output, so the second pass looks at it.
 - **Improve first, act once.** For actions with outside effects (sending, deploying, deleting, publishing), both passes run on the *prepared* work. The action itself happens once.
 - **Scale to the task.** Small tasks get light reviews. The structure stays the same.
 
