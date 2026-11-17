@@ -64,6 +64,7 @@ Judge the result critically:
   - things that look interactive, selected or clickable when they are not;
   - colours whose meaning contradicts the content (warning colours on good news);
   - illustrations or icons that misrepresent what they stand for.
+- **Web pages and dashboards:** where a browser tool is available, open the page and take screenshots at desktop width and at phone width (about 375px). Check that the layout reflows without horizontal scrolling, that large numbers do not wrap awkwardly, and that interactive states (hover, tooltips, open menus) point at the right element and show the right values.
 - **Data:** check that every figure agrees everywhere it appears (cards, charts, text, recommendations). Recompute the derived values.
 - **Code:** run it. Judge by actual behaviour and output, not intent.
 
