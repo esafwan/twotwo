@@ -61,7 +61,8 @@ Judge the result critically:
   - text over busy or low-contrast backgrounds;
   - labels, captions, legends and units that contradict what is drawn (for example, a caption saying "darker" when the bars are blue);
   - the same information repeated in more than one place;
-  - things that look interactive, selected or clickable when they are not;
+  - controls that look interactive, selected or clickable on an interactive page when they do nothing (a call to action on a poster, flyer or ad should still look like one: a button shape is the right signal there);
+  - unbalanced composition: large dead areas, content crammed into one part of the canvas, or a focal point that gets lost;
   - colours whose meaning contradicts the content (warning colours on good news);
   - illustrations or icons that misrepresent what they stand for.
 - **Web pages and dashboards:** where a browser tool is available, open the page and take screenshots at desktop width and at phone width (about 375px). Check that the layout reflows without horizontal scrolling, that large numbers do not wrap awkwardly, and that interactive states (hover, tooltips, open menus) point at the right element and show the right values.
@@ -70,7 +71,7 @@ Judge the result critically:
 
 If you cannot render or run the output, say so in the result instead of implying it was checked.
 
-Then fix those weaknesses and deliver the improved result. Fixes can introduce new problems (a moved element now overlaps something else), so re-inspect the parts you changed. The second pass must be a **substantive** improvement: fixed errors, covered gaps, better structure, stronger reasoning. Rewording alone does not count. If a careful critique finds nothing worth changing, say that briefly instead of making cosmetic edits.
+Then fix those weaknesses and deliver the improved result. A fix must never weaken a stated requirement: if the request asks for something to be clear, prominent or strong, it must be at least as clear, prominent and strong after the second pass. Fixes can introduce new problems (a moved element now overlaps something else), so re-inspect the parts you changed. The second pass must be a **substantive** improvement: fixed errors, covered gaps, better structure, stronger reasoning. Rewording alone does not count. If a careful critique finds nothing worth changing, say that briefly instead of making cosmetic edits.
 
 ## Operating principles
 

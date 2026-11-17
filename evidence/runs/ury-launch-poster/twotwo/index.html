@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>URY Launch Poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe6;--ink:#1b1a17;--mute:#6b665c;--line:#ddd5c7;--card:#fffdf9;--acc:#b5532a;--ok:#2f6b4f}
+*{box-sizing:border-box;margin:0}
+body{background:#e7e0d3;font-family:Inter,system-ui,sans-serif;color:var(--ink);display:flex;justify-content:center;padding:32px 16px}
+.poster{width:100%;max-width:820px;background:var(--bg);border-radius:6px;padding:56px 56px 48px;box-shadow:0 30px 60px -30px rgba(40,30,20,.35)}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.logo{font-family:Fraunces,serif;font-size:26px;letter-spacing:.02em;text-transform:none;color:var(--ink);font-weight:600}
+h1{font-family:Fraunces,serif;font-weight:500;font-size:clamp(40px,8.4vw,76px);line-height:1.02;letter-spacing:-.02em;margin:48px 0 18px}
+h1 em{font-style:italic;color:var(--acc)}
+.sub{font-size:18px;color:var(--mute);max-width:30em;line-height:1.5}
+.device{margin:44px 0 40px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 20px 40px -24px rgba(40,30,20,.3)}
+.bar{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mute);padding-bottom:14px;border-bottom:1px solid var(--line)}
+.bar b{color:var(--ink);font-weight:600}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
+.pane{border:1px solid var(--line);border-radius:10px;padding:14px;background:#fff}
+.pane h4{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-top:1px dashed #eee6d8}
+.row:first-of-type{border-top:0}
+.tag{font-size:11px;padding:1px 7px;border-radius:99px;background:#f2e7dc;color:var(--acc)}
+.tag.ok{background:#e3efe8;color:var(--ok)}
+.big{font-family:Fraunces,serif;font-size:30px;font-weight:600;margin:2px 0 4px}
+.delta{font-size:12px;color:var(--ok)}
+.spark{display:flex;align-items:flex-end;gap:5px;height:44px;margin-top:10px}
+.spark i{flex:1;background:#d9c9b4;border-radius:2px}.spark i:last-child{background:var(--ok)}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;border-top:1px solid var(--line);padding-top:28px}
+.feats .n{font-family:Fraunces,serif;color:var(--acc);font-size:15px}
+.feats h3{font-size:17px;font-weight:600;margin:6px 0}
+.feats p{font-size:14px;color:var(--mute);line-height:1.5}
+.cta{margin-top:44px;display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--ink);color:var(--bg);border-radius:10px;padding:22px 26px}
+.cta span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.cta strong{font-family:Fraunces,serif;font-weight:500;font-size:26px}
+.cta strong u{text-decoration:none;color:#e8a77f}
+@media(max-width:640px){.poster{padding:32px 20px}.grid,.feats{grid-template-columns:1fr}.feats{gap:18px}.cta{flex-direction:column;align-items:flex-start}.cta strong{font-size:22px}.top{flex-direction:column;align-items:flex-start;gap:6px;font-size:11px}h1{margin-top:32px}.device{padding:14px}.grid{gap:10px}}
+</style></head><body>
+<main class="poster">
+ <div class="top"><span class="logo">URY</span><span>Restaurant management platform</span></div>
+ <h1>Your restaurant.<br><em>Under control.</em></h1>
+ <p class="sub">One platform for the whole service, from the first ticket to the final tally.</p>
+ <div class="device" aria-label="URY dashboard preview">
+  <div class="bar"><span><b>Tonight</b> · Main dining room</span><span>7:42 PM</span></div>
+  <div class="grid">
+   <div class="pane"><h4>Orders</h4>
+    <div class="row"><span>Table 4</span><span class="tag ok">Served</span></div>
+    <div class="row"><span>Table 9</span><span class="tag">Preparing</span></div>
+    <div class="row"><span>Takeaway #31</span><span class="tag">New</span></div></div>
+   <div class="pane"><h4>Kitchen</h4>
+    <div class="row"><span>Grill</span><span>3 tickets</span></div>
+    <div class="row"><span>Pastry</span><span>1 ticket</span></div>
+    <div class="row"><span>Avg. prep</span><span>11 min</span></div></div>
+   <div class="pane"><h4>Today's profit</h4>
+    <div class="big">$2,184</div><div class="delta">+8% vs last Tuesday</div>
+    <div class="spark"><i style="height:40%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:62%"></i><i style="height:70%"></i><i style="height:100%"></i></div></div>
+  </div>
+ </div>
+ <section class="feats">
+  <div><span class="n">01</span><h3>Orders</h3><p>Every table, counter and takeaway order tracked from ticket to bill.</p></div>
+  <div><span class="n">02</span><h3>Kitchen operations</h3><p>Live tickets by station, so the pass always knows what's next.</p></div>
+  <div><span class="n">03</span><h3>Daily profit tracking</h3><p>Know what you made today, before you lock up.</p></div>
+ </section>
+ <div class="cta"><span>Launching now</span><strong>Book a demo at <u>ury.app</u></strong></div>
+</main></body></html>

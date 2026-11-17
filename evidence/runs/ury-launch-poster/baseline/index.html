@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>URY Launch Poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f1412;--ink:#f4f1ea;--mute:#9aa39e;--acc:#d9b46a;--card:#18201c;--line:#2a332e}
+*{box-sizing:border-box;margin:0}
+body{background:#050706;font-family:Inter,sans-serif;color:var(--ink);display:flex;justify-content:center;padding:24px 16px}
+.poster{width:100%;max-width:800px;aspect-ratio:2/3;background:radial-gradient(circle at 80% 10%,#1f2a24,var(--bg) 60%);border-radius:8px;padding:56px 56px 48px;display:flex;flex-direction:column;overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.logo{font-weight:800;font-size:22px;letter-spacing:.3em;color:var(--ink)}
+h1{font-size:clamp(40px,8vw,72px);line-height:1.02;font-weight:800;letter-spacing:-.03em;margin-top:48px}
+h1 span{color:var(--acc)}
+.sub{color:var(--mute);font-size:18px;margin-top:16px;max-width:460px;line-height:1.5}
+.device{margin:auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;grid-template-columns:1.2fr 1fr;gap:14px;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.panel{background:#111714;border:1px solid var(--line);border-radius:10px;padding:14px}
+.panel h4{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-top:1px solid var(--line)}
+.tag{font-size:11px;padding:2px 8px;border-radius:99px;background:#2b3a31;color:#9fd8b0}
+.tag.w{background:#3a321f;color:var(--acc)}
+.big{font-size:34px;font-weight:800;color:var(--acc);letter-spacing:-.02em}
+.bars{display:flex;align-items:flex-end;gap:6px;height:60px;margin-top:12px}
+.bars i{flex:1;background:#2f3d35;border-radius:3px}.bars i:last-child{background:var(--acc)}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:8px}
+.feats b{display:block;font-size:16px;margin-bottom:6px}
+.feats p{color:var(--mute);font-size:13px;line-height:1.5}
+.feats .n{color:var(--acc);font-size:12px;font-weight:700;margin-bottom:10px;display:block}
+.cta{margin-top:36px;border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{background:var(--acc);color:#15120a;font-weight:700;padding:14px 24px;border-radius:99px;font-size:16px}
+@media(max-width:600px){.poster{aspect-ratio:auto;padding:32px 22px}.device,.feats{grid-template-columns:1fr}}
+</style></head><body>
+<main class="poster">
+ <div class="top"><span class="logo">URY</span><span>Now launching</span></div>
+ <h1>Your restaurant.<br><span>Under control.</span></h1>
+ <p class="sub">One platform for the front of house, the kitchen and the numbers that matter.</p>
+ <div class="device" aria-hidden="true">
+  <div class="panel"><h4>Live orders</h4>
+   <div class="row"><span>Table 4 · 3 items</span><span class="tag">Served</span></div>
+   <div class="row"><span>Table 9 · 5 items</span><span class="tag w">Cooking</span></div>
+   <div class="row"><span>Takeaway #212</span><span class="tag w">Queued</span></div>
+   <div class="row"><span>Table 2 · 2 items</span><span class="tag">Ready</span></div>
+  </div>
+  <div class="panel"><h4>Today's profit</h4><div class="big">₹48,320</div>
+   <div class="bars"><i style="height:40%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:62%"></i><i style="height:90%"></i></div>
+  </div>
+ </div>
+ <section class="feats">
+  <div><span class="n">01</span><b>Orders</b><p>Dine-in, takeaway and delivery in one live queue.</p></div>
+  <div><span class="n">02</span><b>Kitchen operations</b><p>Tickets routed to stations, timed to the plate.</p></div>
+  <div><span class="n">03</span><b>Daily profit</b><p>Know what you made today, not next month.</p></div>
+ </section>
+ <div class="cta"><span class="btn">Book a demo at ury.app</span><span style="color:var(--mute);font-size:14px">Orders · Kitchen · Profit</span></div>
+</main>
+</body></html>

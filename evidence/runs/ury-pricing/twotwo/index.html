@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>URY Pricing</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0d0b;--card:#1a1714;--line:#2e2924;--text:#f4efe8;--muted:#a59c90;--gold:#d9a85b;--gold2:#f0c987}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(1200px 600px at 50% -10%,#2a2016,transparent),var(--bg);color:var(--text);font:16px/1.5 Inter,system-ui,sans-serif;min-height:100vh}
+section{max-width:1120px;margin:0 auto;padding:72px 16px}
+.head{text-align:center;max-width:620px;margin:0 auto 40px}
+.eyebrow{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+h2{font-family:Fraunces,serif;font-weight:500;font-size:clamp(32px,6vw,48px);line-height:1.1;margin:12px 0}
+.head p{color:var(--muted)}
+.toggle{display:inline-flex;align-items:center;gap:4px;margin-top:28px;padding:4px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+.toggle button{font:inherit;font-size:14px;font-weight:500;color:var(--muted);background:none;border:0;padding:9px 18px;border-radius:999px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.toggle button[aria-pressed=true]{background:var(--text);color:#16120e}
+.save{font-size:12px;font-weight:600;color:#16120e;background:var(--gold2);padding:2px 8px;border-radius:999px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px 28px;display:flex;flex-direction:column}
+.card.pop{border-color:var(--gold);background:linear-gradient(180deg,#261e15,var(--card) 60%);box-shadow:0 20px 60px -20px rgba(217,168,91,.35)}
+.badge{position:absolute;top:-12px;left:28px;background:var(--gold);color:#16120e;font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px}
+h3{font-size:20px;font-weight:600}
+.desc{color:var(--muted);font-size:14px;margin-top:4px;min-height:42px}
+.price{margin:24px 0 4px;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.cur{font-size:15px;color:var(--muted);font-weight:500}
+.amt{font-family:Fraunces,serif;font-size:48px;font-weight:600;line-height:1;white-space:nowrap}
+.per{color:var(--muted);font-size:14px}
+.note{font-size:13px;color:var(--muted);min-height:20px}
+.note b{color:var(--gold2);font-weight:500}
+.cta{display:block;text-align:center;margin:24px 0;padding:13px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid var(--line);color:var(--text)}
+.cta:hover{border-color:var(--muted)}
+.pop .cta{background:var(--gold);color:#16120e;border-color:var(--gold)}
+.pop .cta:hover{background:var(--gold2)}
+ul{list-style:none;padding:0;display:grid;gap:12px;font-size:15px}
+li{display:flex;gap:10px}
+li svg{flex:none;margin-top:3px;color:var(--gold)}
+.fine{text-align:center;color:var(--muted);font-size:13px;margin-top:32px}
+@media(max-width:900px){.grid{grid-template-columns:1fr;max-width:460px;margin:0 auto;gap:28px}.desc{min-height:0}}
+@media(max-width:400px){.card{padding:28px 20px}.badge{left:20px}.toggle button{padding:9px 14px}}
+</style></head><body>
+<section aria-labelledby="t">
+ <div class="head">
+  <div class="eyebrow">Pricing</div>
+  <h2 id="t">Run every outlet from one place</h2>
+  <p>POS, kitchen display, inventory and reporting for restaurants of every size.</p>
+  <div class="toggle" role="group" aria-label="Billing period">
+   <button type="button" data-p="m" aria-pressed="true">Monthly</button>
+   <button type="button" data-p="y" aria-pressed="false">Yearly <span class="save">Save 20%</span></button>
+  </div>
+ </div>
+ <div class="grid">
+  <article class="card">
+   <h3>Starter</h3><p class="desc">For a single restaurant getting organised.</p>
+   <div class="price"><span class="cur">AED</span><span class="amt" data-m="199" data-y="159.20">199</span><span class="per">/month</span></div>
+   <p class="note" data-m="Billed monthly · 1 outlet" data-y="Billed AED 1,910.40 yearly · 1 outlet">Billed monthly · 1 outlet</p>
+   <a class="cta" href="#">Start with Starter</a>
+   <ul><li>CHK 1 outlet</li><li>CHK POS &amp; table management</li><li>CHK Kitchen display</li><li>CHK Daily sales reports</li><li>CHK Email support</li></ul>
+  </article>
+  <article class="card pop">
+   <span class="badge">Most popular</span>
+   <h3>Growth</h3><p class="desc">For growing groups that need control across sites.</p>
+   <div class="price"><span class="cur">AED</span><span class="amt" data-m="499" data-y="399.20">499</span><span class="per">/month</span></div>
+   <p class="note" data-m="Billed monthly · up to 5 outlets" data-y="Billed AED 4,790.40 yearly · up to 5 outlets">Billed monthly · up to 5 outlets</p>
+   <a class="cta" href="#">Start with Growth</a>
+   <ul><li>CHK Up to 5 outlets</li><li>CHK Everything in Starter</li><li>CHK Inventory &amp; recipe costing</li><li>CHK Central menu management</li><li>CHK Priority support</li></ul>
+  </article>
+  <article class="card">
+   <h3>Enterprise</h3><p class="desc">For chains and franchises with custom needs.</p>
+   <div class="price"><span class="amt">Custom</span></div>
+   <p class="note">Tailored to your outlets and volume</p>
+   <a class="cta" href="#">Talk to sales</a>
+   <ul><li>CHK Unlimited outlets</li><li>CHK Everything in Growth</li><li>CHK Integrations &amp; API access</li><li>CHK Dedicated account manager</li><li>CHK Onboarding &amp; SLA</li></ul>
+  </article>
+ </div>
+ <p class="fine">Yearly plans are billed once a year upfront.</p>
+</section>
+<script>
+const ck='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+document.querySelectorAll('li').forEach(l=>l.innerHTML=l.innerHTML.replace('CHK ',ck+'<span>')+'</span>');
+const fmt=v=>{const n=+v;return Number.isInteger(n)?n.toLocaleString('en-US'):n.toLocaleString('en-US',{minimumFractionDigits:2})};
+document.querySelectorAll('.toggle button').forEach(b=>b.onclick=()=>{
+ const p=b.dataset.p;
+ document.querySelectorAll('.toggle button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+ document.querySelectorAll('.amt[data-m]').forEach(e=>e.textContent=fmt(e.dataset[p]));
+ document.querySelectorAll('.note[data-m]').forEach(e=>e.textContent=e.dataset[p]);
+});
+</script>
+</body></html>

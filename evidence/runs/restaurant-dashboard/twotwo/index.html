@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Today at Olive &amp; Ember</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1d1d1b;--mute:#6b6a66;--line:#e6e4df;--bar:#c9c6bf;--peak:#2f6f5e;--good:#1f7a4d;--bad:#b4362a;--badbg:#fbeceA}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Inter,system-ui,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 16px 40px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;margin-bottom:18px}
+h1{font-size:22px;margin:0}header p{margin:0;color:var(--mute);font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.kpi .lbl{font-size:13px;color:var(--mute);font-weight:500}
+.kpi .val{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:4px 0 2px;white-space:nowrap}
+.kpi .cmp{font-size:13px;color:var(--mute)}.up{color:var(--good);font-weight:600}.down{color:var(--bad);font-weight:600}
+.kpi.alert{border:2px solid var(--bad);background:var(--badbg)}
+.flag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--bad);border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px;text-transform:uppercase;letter-spacing:.04em}
+.row{display:grid;grid-template-columns:1.7fr 1fr;gap:12px;margin-top:12px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0}
+h2{font-size:15px;margin:0 0 2px}.sub{font-size:13px;color:var(--mute);margin:0 0 10px}
+svg{display:block;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--mute);margin-top:6px}.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+ol{margin:0;padding:0;list-style:none;counter-reset:n}
+ol li{counter-increment:n;position:relative;padding:10px 0 10px 30px;border-top:1px solid var(--line);font-size:14px}
+ol li:first-child{border-top:0}
+ol li::before{content:counter(n);position:absolute;left:0;top:10px;width:20px;height:20px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;font-weight:600;text-align:center;line-height:20px}
+ol li.urgent::before{background:var(--bad)}
+ol b{display:block}
+@media (max-width:860px){.kpis{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}}
+@media (max-width:420px){.kpi{padding:12px}.kpi .val{font-size:24px}.flag{margin:4px 0 0}}
+</style></head><body><div class="wrap">
+<header><h1>Olive &amp; Ember: today</h1><p>Wednesday 18 Nov · closed 11:00 pm · compared with the last 4 Wednesdays</p></header>
+<section class="kpis">
+ <div class="kpi"><div class="lbl">Revenue</div><div class="val">$10,570</div><div class="cmp"><span class="up">+3.4%</span> vs $10,220</div></div>
+ <div class="kpi"><div class="lbl">Orders</div><div class="val">298</div><div class="cmp"><span class="up">+20%</span> vs 248</div></div>
+ <div class="kpi alert"><div class="lbl">Average bill <span class="flag">Needs attention</span></div><div class="val">$35.47</div><div class="cmp"><span class="down">−14%</span> vs $41.20</div></div>
+ <div class="kpi"><div class="lbl">Busiest hour</div><div class="val">8–9 pm</div><div class="cmp">$1,890 · 45 orders</div></div>
+</section>
+<section class="row">
+ <div class="panel"><h2>Sales by hour</h2><p class="sub">Busiest stretch 7–10 pm: $4,810, 46% of the day.</p>
+  <svg id="chart" viewBox="0 0 600 260" role="img" aria-label="Hourly sales bar chart, 11 am to 11 pm, peaking at $1,890 from 8 to 9 pm"></svg>
+  <div class="legend"><span><i style="background:var(--peak)"></i>Busy hours (7–10 pm)</span><span><i style="background:var(--bar)"></i>Other hours</span></div>
+ </div>
+ <div class="panel"><h2>What to do next</h2><p class="sub">Based on today's numbers</p>
+  <ol>
+   <li class="urgent"><b>Lift the average bill.</b>More guests came in but each spent less: $35.47 vs $41.20. Have servers offer drinks and desserts at every table tomorrow.</li>
+   <li><b>Staff up for 7–10 pm.</b>Those three hours took $4,810 and 118 orders. Add one server and one line cook on Wednesday evenings.</li>
+   <li><b>Fill the 3–5 pm dip.</b>Only $450 across two hours. Try a happy-hour or set-menu offer, or trim the afternoon shift.</li>
+  </ol>
+ </div>
+</section>
+</div>
+<script>
+const d=[["11a",240],["12p",1180],["1p",1420],["2p",610],["3p",260],["4p",190],["5p",430],["6p",1050],["7p",1680],["8p",1890],["9p",1240],["10p",380]];
+const busy=["7p","8p","9p"];
+function draw(){const el=document.getElementById("chart");const W=Math.max(300,Math.round(el.getBoundingClientRect().width)),H=W<500?220:260;el.setAttribute("viewBox",`0 0 ${W} ${H}`);const L=44,B=28,T=22,max=2000,bw=(W-L)/d.length;let s="";
+for(const v of [0,500,1000,1500,2000]){const y=H-B-(v/max)*(H-B-T);s+=`<line x1="${L}" x2="${W}" y1="${y}" y2="${y}" stroke="#e6e4df"/><text x="${L-6}" y="${y+4}" font-size="11" fill="#6b6a66" text-anchor="end">$${v/1000}k</text>`}
+d.forEach(([h,v],i)=>{const x=L+i*bw+bw*.18,w=bw*.64,bh=(v/max)*(H-B-T),y=H-B-bh,pk=busy.includes(h);
+s+=`<rect x="${x}" y="${y}" width="${w}" height="${bh}" rx="3" fill="${pk?'#2f6f5e':'#c9c6bf'}"><title>${h}: $${v.toLocaleString()}</title></rect><text x="${x+w/2}" y="${H-10}" font-size="11" fill="#6b6a66" text-anchor="middle">${h}</text>`;
+if(pk)s+=`<text x="${x+w/2}" y="${y-6}" font-size="11" font-weight="600" fill="#1d1d1b" text-anchor="middle">$${(v/1000).toFixed(1)}k</text>`});
+el.innerHTML=s;}
+draw();addEventListener("resize",draw);
+</script></body></html>

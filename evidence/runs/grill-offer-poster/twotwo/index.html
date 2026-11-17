@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weekend Grill Feast</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a0f0a;--ember:#ff6a1a;--gold:#ffc23d;--cream:#fff4e3}
+*{box-sizing:border-box;margin:0}
+body{background:#0d0806;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;font-family:Inter,sans-serif}
+.wrap{width:min(100vw,1080px);aspect-ratio:4/5;container-type:inline-size}
+.p{position:relative;width:100%;height:100%;overflow:hidden;color:var(--cream);
+background:radial-gradient(circle at 50% 55%,#5a2410 0,#2a120a 45%,#120906 80%)}
+.u{font-size:1cqw}
+.brand{position:absolute;top:4.5cqw;left:6cqw;font:800 3.2cqw Inter;letter-spacing:.35em}
+.brand b{color:var(--ember)}
+.when{position:absolute;top:4.5cqw;right:6cqw;font:700 2.4cqw Inter;color:var(--gold);letter-spacing:.12em}
+h1{position:absolute;top:10cqw;left:6cqw;font:400 11.5cqw/0.9 Anton;text-transform:uppercase;letter-spacing:.01em}
+h1 span{color:var(--ember)}
+.food{position:absolute;left:3cqw;top:31cqw;width:94cqw}
+.price{position:absolute;right:5cqw;top:5cqw;width:28cqw;height:28cqw;border-radius:50%;background:var(--gold);color:var(--ink);
+display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-8deg);box-shadow:0 1cqw 3cqw #0008}
+.price small{font:800 2.6cqw Inter;letter-spacing:.15em}
+.price strong{font:400 12cqw/0.9 Anton}
+.price em{font:800 3.4cqw Inter;font-style:normal}
+.offer{position:absolute;left:6cqw;right:6cqw;top:94cqw;text-align:center;font:800 4cqw/1.25 Inter}
+.offer i{font-style:normal;color:var(--gold)}
+.cond{position:absolute;left:6cqw;right:6cqw;bottom:6cqw;display:flex;border:.3cqw solid #ffffff40;border-radius:2cqw;overflow:hidden}
+.cond div{flex:1;padding:2.4cqw 1cqw;text-align:center;border-right:.3cqw solid #ffffff40}
+.cond div:last-child{border:0;background:var(--ember);color:var(--ink)}
+.cond small{display:block;font:700 1.8cqw Inter;letter-spacing:.15em;opacity:.75;margin-bottom:.6cqw}
+.cond b{font:400 4.4cqw Anton;letter-spacing:.02em}
+</style></head><body><div class="wrap"><div class="p">
+<div class="brand">GRILL<b>AX</b></div>
+<h1>Weekend<br><span>Grill Feast</span></h1>
+<svg class="food" viewBox="0 0 840 560" role="img" aria-label="Whole grilled chicken with two sides and two drinks">
+<defs>
+<radialGradient id="sk" cx=".45" cy=".35" r=".7"><stop offset="0" stop-color="#f0a443"/><stop offset=".55" stop-color="#c9621c"/><stop offset="1" stop-color="#6e2a0b"/></radialGradient>
+<radialGradient id="pl" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#3b2b22"/><stop offset="1" stop-color="#140c08"/></radialGradient>
+<linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#ffffff55"/><stop offset=".4" stop-color="#ffffff10"/><stop offset="1" stop-color="#ffffff35"/></linearGradient>
+<filter id="sh"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-opacity=".6"/></filter>
+</defs>
+<!-- glow -->
+<ellipse cx="420" cy="330" rx="400" ry="200" fill="#ff6a1a" opacity=".18"/>
+<!-- drinks -->
+<g filter="url(#sh)">
+ <path d="M20 170h96l-10 230h-76z" fill="#b8330f"/><path d="M20 170h96l-3 60h-90z" fill="#ffe6c0" opacity=".9"/>
+ <path d="M20 170h96l-10 230h-76z" fill="url(#gl)"/><rect x="72" y="110" width="8" height="90" fill="#ffc23d" transform="rotate(12 76 150)"/>
+ <path d="M724 170h96l-10 230h-76z" fill="#e8a020"/><path d="M724 170h96l-3 60h-90z" fill="#fff6dc" opacity=".9"/>
+ <path d="M724 170h96l-10 230h-76z" fill="url(#gl)"/><circle cx="790" cy="185" r="22" fill="#9bd14a" stroke="#5f8f1f" stroke-width="4"/>
+</g>
+<!-- platter -->
+<ellipse cx="420" cy="380" rx="300" ry="130" fill="url(#pl)" filter="url(#sh)"/>
+<ellipse cx="420" cy="372" rx="270" ry="112" fill="none" stroke="#ffffff18" stroke-width="3"/>
+<!-- side 1: fries -->
+<g filter="url(#sh)"><ellipse cx="205" cy="420" rx="85" ry="38" fill="#e9d9c3"/>
+<g fill="#f2b742" stroke="#c98a1a" stroke-width="2">
+<rect x="160" y="350" width="14" height="70" rx="3" transform="rotate(-14 167 385)"/><rect x="180" y="340" width="14" height="80" rx="3" transform="rotate(-4 187 380)"/>
+<rect x="200" y="345" width="14" height="76" rx="3" transform="rotate(8 207 383)"/><rect x="220" y="352" width="14" height="70" rx="3" transform="rotate(18 227 387)"/>
+<rect x="240" y="362" width="14" height="60" rx="3" transform="rotate(26 247 392)"/></g>
+<path d="M120 415q85 50 170 0v14q-85 40-170 0z" fill="#d8c4a8"/></g>
+<!-- side 2: salad -->
+<g filter="url(#sh)"><ellipse cx="640" cy="420" rx="85" ry="38" fill="#e9d9c3"/>
+<circle cx="610" cy="398" r="26" fill="#4f9a2a"/><circle cx="645" cy="388" r="28" fill="#6cbf36"/><circle cx="675" cy="402" r="24" fill="#3f8220"/>
+<circle cx="628" cy="384" r="10" fill="#e23a1e"/><circle cx="662" cy="406" r="9" fill="#e23a1e"/><circle cx="600" cy="410" r="8" fill="#fff1c4"/>
+<path d="M555 415q85 50 170 0v14q-85 40-170 0z" fill="#d8c4a8"/></g>
+<!-- chicken -->
+<g filter="url(#sh)">
+ <ellipse cx="290" cy="310" rx="70" ry="42" fill="url(#sk)" transform="rotate(-25 290 310)"/>
+ <ellipse cx="550" cy="310" rx="70" ry="42" fill="url(#sk)" transform="rotate(25 550 310)"/>
+ <circle cx="238" cy="280" r="16" fill="#f4e6cf"/><circle cx="602" cy="280" r="16" fill="#f4e6cf"/>
+ <ellipse cx="420" cy="320" rx="165" ry="110" fill="url(#sk)"/>
+ <ellipse cx="335" cy="370" rx="58" ry="30" fill="url(#sk)" transform="rotate(20 335 370)"/>
+ <ellipse cx="505" cy="370" rx="58" ry="30" fill="url(#sk)" transform="rotate(-20 505 370)"/>
+ <g stroke="#3a1505" stroke-width="9" stroke-linecap="round" opacity=".75">
+  <path d="M320 270l60 -40"/><path d="M340 320l110 -80"/><path d="M380 360l120 -86"/><path d="M450 380l70 -50"/>
+ </g>
+ <ellipse cx="380" cy="265" rx="60" ry="20" fill="#ffd9a0" opacity=".35" transform="rotate(-18 380 265)"/>
+ <g fill="#2f6b16"><circle cx="420" cy="300" r="5"/><circle cx="470" cy="330" r="4"/><circle cx="390" cy="340" r="4"/><circle cx="440" cy="260" r="4"/></g>
+ <path d="M455 410a28 20 0 0 1 56 0z" fill="#ffd84a" stroke="#c99a10" stroke-width="3"/>
+</g>
+<!-- steam -->
+<g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".25">
+<path d="M380 170q-20-30 0-60t0-60"/><path d="M430 160q-20-30 0-60t0-60"/><path d="M480 170q-20-30 0-60t0-60"/></g>
+</svg>
+<div class="price"><small>ONLY</small><strong>49</strong><em>AED</em></div>
+<p class="offer">Full grilled chicken <i>+</i> 2 sides <i>+</i> 2 drinks</p>
+<div class="cond"><div><small>DAYS</small><b>FRI – SUN</b></div><div><small>TIME</small><b>6 – 11 PM</b></div><div><small>AVAILABLE</small><b>DINE-IN ONLY</b></div></div>
+</div></div></body></html>

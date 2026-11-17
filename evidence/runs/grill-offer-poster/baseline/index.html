@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grillax Weekend Feast</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a0f0a;--ember:#ff6a1a;--gold:#ffc24b;--cream:#fff4e3}
+*{box-sizing:border-box;margin:0}
+body{background:#0d0806;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:Inter,sans-serif}
+.poster{width:1080px;height:1350px;position:relative;overflow:hidden;color:var(--cream);
+background:radial-gradient(ellipse at 50% 55%,#5a2210 0%,#2a120a 45%,#120906 80%)}
+.brand{position:absolute;top:56px;left:64px;font-family:Anton;font-size:44px;letter-spacing:4px;color:var(--gold)}
+.brand span{color:var(--ember)}
+.tag{position:absolute;top:66px;right:64px;font-weight:800;font-size:22px;letter-spacing:3px;border:2px solid var(--gold);color:var(--gold);padding:8px 18px;border-radius:40px}
+h1{position:absolute;top:140px;left:64px;right:64px;font-family:Anton;font-weight:400;font-size:132px;line-height:.92;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--ember)}
+.food{position:absolute;left:50%;top:430px;transform:translateX(-50%);width:900px}
+.price{position:absolute;right:56px;top:420px;width:260px;height:260px;border-radius:50%;background:var(--ember);
+display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-10deg);box-shadow:0 20px 50px #0008;border:6px solid var(--gold)}
+.price small{font-weight:800;font-size:30px;letter-spacing:3px;color:var(--ink)}
+.price b{font-family:Anton;font-size:128px;line-height:.95;color:#fff;font-weight:400}
+.offer{position:absolute;left:64px;right:64px;top:1040px;font-size:34px;font-weight:700;text-align:center}
+.offer strong{color:var(--gold)}
+.cond{position:absolute;left:0;right:0;bottom:0;background:var(--gold);color:var(--ink);display:flex;justify-content:space-around;padding:34px 40px;font-weight:800;font-size:30px;text-transform:uppercase;letter-spacing:1px}
+.cond div{text-align:center}.cond small{display:block;font-size:18px;letter-spacing:3px;opacity:.7;margin-bottom:6px}
+</style></head><body>
+<div class="poster">
+<div class="brand">GRILL<span>AX</span></div>
+<div class="tag">WEEKEND OFFER</div>
+<h1>Weekend<br><em>Grill Feast</em></h1>
+<svg class="food" viewBox="0 0 900 620" aria-label="Whole grilled chicken with two sides and two drinks">
+<defs>
+<radialGradient id="ch" cx="45%" cy="35%" r="70%"><stop offset="0" stop-color="#f2a64a"/><stop offset=".55" stop-color="#c0571b"/><stop offset="1" stop-color="#6b2408"/></radialGradient>
+<radialGradient id="glow" cx="50%" cy="50%"><stop offset="0" stop-color="#ff7a20" stop-opacity=".55"/><stop offset="1" stop-color="#ff7a20" stop-opacity="0"/></radialGradient>
+<linearGradient id="dr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf6a"/><stop offset="1" stop-color="#e2681a"/></linearGradient>
+</defs>
+<ellipse cx="450" cy="360" rx="440" ry="250" fill="url(#glow)"/>
+<!-- drinks -->
+<g transform="translate(40,150)"><path d="M0 0h110l-12 300H12z" fill="url(#dr)" opacity=".92"/><rect x="0" y="0" width="110" height="18" fill="#fff" opacity=".5"/><rect x="62" y="-70" width="10" height="90" fill="#e33" transform="rotate(12 67 0)"/><circle cx="35" cy="120" r="6" fill="#fff" opacity=".6"/><circle cx="70" cy="200" r="4" fill="#fff" opacity=".6"/></g>
+<g transform="translate(750,150)"><path d="M0 0h110l-12 300H12z" fill="url(#dr)" opacity=".92"/><rect x="0" y="0" width="110" height="18" fill="#fff" opacity=".5"/><rect x="40" y="-70" width="10" height="90" fill="#e33" transform="rotate(-12 45 0)"/><circle cx="60" cy="140" r="6" fill="#fff" opacity=".6"/></g>
+<!-- platter -->
+<ellipse cx="450" cy="440" rx="330" ry="110" fill="#2b1a12"/><ellipse cx="450" cy="425" rx="320" ry="100" fill="#e8dccb"/><ellipse cx="450" cy="425" rx="280" ry="82" fill="#f6eee2"/>
+<!-- sides -->
+<g transform="translate(205,400)"><ellipse rx="80" ry="34" fill="#c9b8a0"/><ellipse cy="-6" rx="70" ry="28" fill="#f4e7c8"/>
+<g fill="#f5c34a" stroke="#c98a1a" stroke-width="2"><rect x="-50" y="-30" width="14" height="44" rx="3" transform="rotate(-20)"/><rect x="-20" y="-36" width="14" height="46" rx="3" transform="rotate(10)"/><rect x="10" y="-30" width="14" height="42" rx="3" transform="rotate(-8)"/><rect x="34" y="-28" width="14" height="40" rx="3" transform="rotate(22)"/></g></g>
+<g transform="translate(695,400)"><ellipse rx="80" ry="34" fill="#c9b8a0"/><ellipse cy="-6" rx="70" ry="28" fill="#7fb24a"/>
+<circle cx="-30" cy="-14" r="10" fill="#e8402f"/><circle cx="20" cy="-4" r="9" fill="#e8402f"/><path d="M-45 0q20-12 40 0M5-20q20-10 40 2" stroke="#fff" stroke-width="5" fill="none"/></g>
+<!-- chicken -->
+<g transform="translate(450,330)">
+<ellipse cx="0" cy="95" rx="190" ry="30" fill="#0005"/>
+<path d="M-170 40C-180-60-90-130 0-130S180-60 170 40C160 100 80 120 0 120S-160 100-170 40z" fill="url(#ch)"/>
+<path d="M-160 10c-40-10-80 10-90 50 30 20 70 15 95-10z" fill="url(#ch)"/><circle cx="-255" cy="62" r="14" fill="#f3e3c8"/>
+<path d="M160 10c40-10 80 10 90 50-30 20-70 15-95-10z" fill="url(#ch)"/><circle cx="255" cy="62" r="14" fill="#f3e3c8"/>
+<g stroke="#3a1204" stroke-width="9" stroke-linecap="round" opacity=".75"><path d="M-110-60l60 40M-60-90l80 55M0-105l90 60M60-90l70 45M-130 0l50 30"/></g>
+<path d="M-90-90c40-25 120-25 150 5" stroke="#ffe0a0" stroke-width="10" fill="none" opacity=".5" stroke-linecap="round"/>
+<g fill="#3e7a22"><circle cx="-40" cy="-40" r="6"/><circle cx="30" cy="-20" r="5"/><circle cx="90" cy="10" r="6"/><circle cx="-90" cy="20" r="5"/></g>
+<g transform="translate(120,90)"><path d="M0 0a30 30 0 0 1 60 0z" fill="#ffe14a"/></g>
+</g>
+<!-- steam -->
+<g stroke="#fff" stroke-width="5" fill="none" opacity=".25" stroke-linecap="round"><path d="M400 150c-20-30 20-50 0-80"/><path d="M460 140c-20-30 20-50 0-80"/><path d="M520 150c-20-30 20-50 0-80"/></g>
+</svg>
+<div class="price"><small>ONLY</small><b>49</b><small>AED</small></div>
+<p class="offer">Full grilled chicken <strong>+</strong> 2 sides <strong>+</strong> 2 drinks</p>
+<div class="cond"><div><small>Days</small>Fri – Sun</div><div><small>Time</small>6 – 11 PM</div><div><small>Service</small>Dine-in only</div></div>
+</div>
+</body></html>
